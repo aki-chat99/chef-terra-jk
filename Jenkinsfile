@@ -25,8 +25,6 @@ cp -f /var/lib/jenkins/test2/a.txt /var/lib/jenkins/test2/chef
         stage('config infra') {
           steps {
             echo 'config infra'
-            sh '''cd /var/lib/jenkins/test2/chef
-sh anki.sh'''
           }
         }
       }
