@@ -29,7 +29,7 @@ rm -f /var/lib/jenkins/test2/variables.tf'''
             sh '''cd /var/lib/jenkins/test2/chef
 #sh anki.sh
 pwd
-cat anki.sh
+sh anki.sh
 rm /var/lib/jenkins/test2/chef/a.txt'''
           }
         }
