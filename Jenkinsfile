@@ -24,7 +24,7 @@ rm -f /var/lib/jenkins/test/variables.tf'''
         stage('post config ') {
           steps {
             echo 'configuring infra'
-            sh '''cd /var/lib/jenkins/test1
+            sh '''cd /var/lib/jenkins/test1/chef
 cp -f /var/lib/jenkins/test1/a.txt chef
 sh anki.sh'''
           }
