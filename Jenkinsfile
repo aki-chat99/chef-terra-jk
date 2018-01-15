@@ -20,6 +20,7 @@ terraform apply -auto-approve
 terraform output pub_ip>>a.txt
 cp -f /var/lib/jenkins/test2/a.txt /var/lib/jenkins/test2/chef
 cd /var/lib/jenkins/test2/chef
+knife ssl fetch
 sh anki.sh
 
 rm -f /var/lib/jenkins/test2/a.txt
