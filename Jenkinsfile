@@ -18,9 +18,8 @@ terraform init
 terraform plan 
 terraform apply -auto-approve
 terraform output pub_ip>>a.txt
-cp -f /var/lib/jenkins/test2/a.txt chef
-rm -f /var/lib/jenkins/test2/a.txt
-rm -f /var/lib/jenkins/test2/variables.tf'''
+cp -f /var/lib/jenkins/test2/a.txt /var/lib/jenkins/test2/chef
+'''
           }
         }
         stage('config infra') {
