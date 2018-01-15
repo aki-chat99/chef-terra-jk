@@ -12,9 +12,9 @@ pipeline {
         stage('building infra') {
           steps {
             echo 'creating infra'
-            sh '''cd /var/lib/jenkins/test1
-cp -f /var/lib/jenkins/test1/chef/variables.tf ./ 
-terraform init -lock=false
+            sh '''cd /var/lib/jenkins/test2
+cp -f /var/lib/jenkins/test2/chef/variables.tf ./ 
+terraform init
 '''
           }
         }
