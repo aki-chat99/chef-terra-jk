@@ -26,7 +26,7 @@ rm -f /var/lib/jenkins/test2/variables.tf'''
         stage('config infra') {
           steps {
             echo 'config infra'
-            sh '''cd /var/lib/jenkins/test1/chef
+            sh '''cd /var/lib/jenkins/test2/chef
 sh anki.sh'''
           }
         }
