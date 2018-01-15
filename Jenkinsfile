@@ -26,7 +26,6 @@ rm -f /var/lib/jenkins/test/variables.tf'''
             echo 'configuring infra'
             sh '''cd /var/lib/jenkins/test1
 cp -f /var/lib/jenkins/test1/a.txt chef
-cp -f /var/lib/jenkins/test1/pro/variables.tf ./ 
 sh anki.sh'''
           }
         }
