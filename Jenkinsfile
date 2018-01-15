@@ -14,7 +14,7 @@ pipeline {
             echo 'creating infra'
             sh '''cd /var/lib/jenkins/test1
 cp -f /var/lib/jenkins/test1/chef/variables.tf ./ 
-terraform init
+terraform init -force
 '''
           }
         }
