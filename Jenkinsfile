@@ -12,7 +12,7 @@ pipeline {
         stage('building infra') {
           steps {
             echo 'creating infra'
-            sh 'terraform destroy -y'
+            sh 'terraform destroy -force'
           }
         }
         stage('config infra') {
