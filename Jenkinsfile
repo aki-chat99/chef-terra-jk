@@ -12,23 +12,12 @@ pipeline {
         stage('building infra') {
           steps {
             echo 'creating infra'
-            sh '''cd /var/lib/jenkins/test2
-cp -f /var/lib/jenkins/test2/chef/variables.tf ./ 
-terraform init
-terraform plan 
-terraform apply -auto-approve
-terraform output private_ip>>a.txt
-cp -f /var/lib/jenkins/test2/a.txt /var/lib/jenkins/test2/chef
-rm -f /var/lib/jenkins/test2/a.txt
-rm -f /var/lib/jenkins/test2/variables.tf'''
+            sh 'terraform destroy -y'
           }
         }
         stage('config infra') {
           steps {
             echo 'config infra'
-            sh '''cd /var/lib/jenkins/test2/chef
-sh anki.sh
-rm /var/lib/jenkins/test2/chef/a.txt '''
           }
         }
       }
